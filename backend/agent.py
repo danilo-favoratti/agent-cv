@@ -39,10 +39,26 @@ Action: the action to take, should be one of [{', '.join(self.tools.keys())}]
 Action Input: the input to the action
 Observation: the result of the action
 
-When you have a response to say to the Human, or if you do not need to use a tool, you MUST use the format:
+When you have a response to say to the Human, or if you do not need to use a tool (or have already used tools to gather the info), you MUST use the format:
 
 Thought: Do I need to use a tool? No
 Final Answer: [your response here]
+
+RICH UI INSTRUCTIONS:
+If the user asks for a LIST of items (e.g., projects, skills, history, hobbies, awards), do NOT just summarize them in text.
+If you used multiple tools (e.g., projects and skills), combine the items into a single list or choose the most relevant category for the title.
+Return the raw data in a structured JSON block inside your Final Answer using the tag <UI_DATA>.
+The generic format is:
+<UI_DATA>
+{{
+  "type": "list",
+  "title": "Combined Results",
+  "items": [
+    {{"title": "Item Name", "description": "Details...", "tags": ["Tag1", "Tag2"], "icon": "icon_name_or_emoji"}}
+  ]
+}}
+</UI_DATA>
+Then add a brief text summary after if needed.
 
 Begin!
 """

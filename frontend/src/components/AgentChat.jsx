@@ -155,21 +155,73 @@ const AgentChat = () => {
                     </div>
                 );
 
-            case "final_answer":
+            case "final_answer": {
+                // Check if the content has <UI_DATA> block
+                const uiDataMatch = msg.content.match(/<UI_DATA>([\s\S]*?)<\/UI_DATA>/);
+                let uiData = null;
+                let textContent = msg.content;
+
+                if (uiDataMatch) {
+                    try {
+                        uiData = JSON.parse(uiDataMatch[1]);
+                        // Remove the UI_DATA block from the text to show the rest
+                        textContent = msg.content.replace(/<UI_DATA>[\s\S]*?<\/UI_DATA>/, "").trim();
+                    } catch (e) {
+                        console.error("Error parsing UI Data", e);
+                    }
+                }
+
                 return (
                     <div key={index} className="flex gap-3 mb-6 mt-2 animate-in zoom-in-95 duration-500">
                         <div className="mt-1 text-blue-500 bg-blue-500/10 p-1.5 rounded-lg h-fit">
                             <CheckCircle2 size={20} />
                         </div>
-                        <div className="bg-slate-800/50 p-4 rounded-2xl rounded-tl-none border border-slate-700/50 shadow-xl backdrop-blur-sm">
-                            <div className="prose prose-invert prose-sm max-w-[700px] text-slate-200 leading-relaxed">
-                                <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                                    {msg.content}
-                                </ReactMarkdown>
-                            </div>
+                        <div className="flex-1 space-y-4">
+                            {/* Rich UI Component */}
+                            {uiData && uiData.type === 'list' && (
+                                <div className="bg-slate-800/30 p-4 rounded-2xl border border-slate-700/50 backdrop-blur-sm">
+                                    <h3 className="text-sm font-bold text-slate-300 mb-3 uppercase tracking-wider flex items-center gap-2">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+                                        {uiData.title}
+                                    </h3>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                        {uiData.items.map((item, i) => (
+                                            <div key={i} className="bg-slate-900/80 p-3 rounded-xl border border-slate-700 hover:border-blue-500/30 hover:bg-slate-800 transition-all group">
+                                                <div className="flex items-start justify-between mb-1">
+                                                    <h4 className="font-semibold text-slate-200 text-sm">{item.title}</h4>
+                                                    {item.icon && <span className="text-lg opacity-80 group-hover:scale-110 transition-transform">{item.icon}</span>}
+                                                </div>
+                                                {item.role && <p className="text-xs text-blue-400 mb-1">{item.role}</p>}
+                                                {item.description && <p className="text-xs text-slate-400 mb-2 line-clamp-3">{item.description}</p>}
+                                                {item.tags && (
+                                                    <div className="flex flex-wrap gap-1.5">
+                                                        {item.tags.map((tag, t) => (
+                                                            <span key={t} className="text-[10px] bg-slate-800 text-slate-400 px-1.5 py-0.5 rounded border border-slate-700">
+                                                                {tag}
+                                                            </span>
+                                                        ))}
+                                                    </div>
+                                                )}
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Standard Text Content */}
+                            {textContent && (
+                                <div className="bg-slate-800/50 p-4 rounded-2xl rounded-tl-none border border-slate-700/50 shadow-xl backdrop-blur-sm">
+                                    <div className="prose prose-invert prose-sm max-w-[700px] text-slate-200 leading-relaxed">
+                                        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                                            {textContent}
+                                        </ReactMarkdown>
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     </div>
                 );
+            }
 
             case "error":
                 return (
