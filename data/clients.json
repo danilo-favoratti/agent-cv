@@ -1,50 +1,58 @@
 [
     {
-        "name": "Meta",
-        "industry": "Social Media / Technology",
-        "duration": "Aug 2025 - Present",
-        "role": "Full Stack Gen AI Developer"
-    },
-    {
         "name": "Pactto",
-        "industry": "Media Technology",
-        "duration": "Feb 2024 - Apr 2024, Nov 2024 - Mar 2025",
-        "role": "Senior Mobile / Fullstack Engineer"
+        "role": "Senior Mobile / Fullstack Engineer",
+        "location": "U.S.",
+        "duration": "2025",
+        "description": "Architected and delivered an AI-powered video upload pipeline (455% speed increase). Led backend API development using Kotlin, Spring, and Hibernate. Designed microservices with Ktor and WebSocket. Mentored engineers on GenAI best practices."
     },
     {
-        "name": "Sam's Club / Walmart",
-        "industry": "Retail / E-commerce",
-        "duration": "Apr 2018 - Oct 2024",
-        "role": "Android Senior Developer"
+        "name": "Sam’s Club",
+        "role": "Senior Android Engineer",
+        "location": "U.S.",
+        "duration": "2024",
+        "description": "Led Android development for integration with Walmart. Designed key modules using Kotlin, optimized performance. Collaborated cross-functionally and developed robust unit/UI testing strategies."
     },
     {
-        "name": "Shield AI",
-        "industry": "Defense / AI",
-        "duration": "May 2023 - Oct 2023",
-        "role": "Android Senior Developer"
+        "name": "Shield.ai",
+        "role": "Senior Android Engineer",
+        "location": "U.S.",
+        "duration": "2023",
+        "description": "Developed framework using Google Maps API for AI-controlled drone navigation. Completed project on time despite 25% team reduction. Achieved 80% test coverage with independent testing framework."
     },
     {
-        "name": "ArcTouch",
-        "industry": "Software Agency",
-        "duration": "Dec 2016 - Oct 2022",
-        "role": "Android Senior Developer"
+        "name": "ArcTouch (Walmart)",
+        "role": "Senior Android Engineer",
+        "location": "U.S.",
+        "duration": "2016-2023",
+        "description": "Client Walmart: Implemented A/B testing (+25% tips), ensuring ADA compliance, and data protection (Splunk). Enhanced Book Slot feature and developed Onboarding platform using React."
+    },
+    {
+        "name": "ArcTouch (3M)",
+        "role": "Senior Android Engineer",
+        "location": "U.S.",
+        "duration": "2016-2023",
+        "description": "Designed foundational framework using Kotlin and MVVM with Custom Views for dynamic graph visualization."
+    },
+    {
+        "name": "ArcTouch (HP)",
+        "role": "Senior Android Engineer",
+        "location": "U.S.",
+        "duration": "2016-2023",
+        "description": "Integrated Bluetooth connectivity for Sprocket printer (+30% retention). Implemented Picasso for image features (+0.4 point satisfaction)."
     },
     {
         "name": "Tecsinapse",
-        "industry": "Technology",
-        "duration": "Jan 2015 - Nov 2016",
-        "role": "Android Tech Lead"
+        "role": "FullStack Tech Lead",
+        "location": "Brazil",
+        "duration": "2014-2016",
+        "description": "Led cross-functional team of 6. Developed social network for Harley Davidson (Meteor.JS). Architected videowall product (ActionScript/Java). Mentored team members."
     },
     {
         "name": "Yotta Apps",
-        "industry": "Software House",
-        "duration": "Sep 2010 - Dec 2014",
-        "role": "Co-Founder and Android Tech Lead"
-    },
-    {
-        "name": "Siemens / SSI",
-        "industry": "Technology / Electronics",
-        "duration": "Jul 2000 - Apr 2003",
-        "role": "Java Developer"
+        "role": "Founder, Fullstack and Android Developer",
+        "location": "Brazil",
+        "duration": "2010-2014",
+        "description": "Used Android NDK for remote interviewing. Engineered offline-ready student-teacher app. Created Analytics Tool. Led 4 freelancers."
     }
 ]

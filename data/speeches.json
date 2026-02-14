@@ -1,0 +1,17 @@
+[
+    {
+        "event": "Campus Party Brazil",
+        "year": "2021",
+        "description": "Speaker at one of the world's largest technology festivals."
+    },
+    {
+        "event": "Google Developer Group Floripa",
+        "year": "2018",
+        "description": "Provided technical insights and talks to the local developer community."
+    },
+    {
+        "event": "The Developer Conference (TDC)",
+        "year": "2017",
+        "description": "Speaker at Brazil's largest developer conference."
+    }
+]

@@ -1,30 +1,38 @@
 [
     {
-        "skill": "Leadership & Mentoring",
-        "description": "Experienced in leading mobile teams and mentoring engineers on modern development patterns and GenAI best practices."
+        "skill": "Ownership",
+        "description": "Taking ownership of platforms and products, from founding companies to leading critical integration modules."
     },
     {
-        "skill": "Cross-functional Collaboration",
-        "description": "Proven track record of driving collaboration between technical, design, and product teams to deliver high-quality features."
+        "skill": "Fellowship",
+        "description": "Team bounding and mentoring, facilitating growth from junior to senior roles."
     },
     {
-        "skill": "Entrepreneurial Mindset",
-        "description": "Strong sense of ownership and initiative, demonstrated by co-founding companies and launching multiple successful own projects."
+        "skill": "Loyalty",
+        "description": "Committed to long-term success of projects and teams."
     },
     {
-        "skill": "High Performance & Efficiency",
-        "description": "Focused on optimizing processes and architectures to achieve significant gains in speed and system reliability."
+        "skill": "Positive Attitude",
+        "description": "Maintains constructive outlook even during team reductions or challenging deadlines."
     },
     {
-        "skill": "Problem Solving",
-        "description": "Analytical approach to complex technical challenges, capable of architecting innovative solutions for next-gen products."
+        "skill": "Creative Approach",
+        "description": "Innovative solutions like remote interviewing via IP Cams or dynamic graph visualization."
     },
     {
-        "skill": "Timeliness & Reliability",
-        "description": "Consistently ensures project delivery on schedule while maintaining high standards of code quality and security."
+        "skill": "Entrepreneurship",
+        "description": "Founder experience, handling marketing, sales, and community management."
     },
     {
-        "skill": "Adaptability",
-        "description": "Quickly masters new technologies and domains, as seen in the transition from mobile development to GenAI and drone navigation."
+        "skill": "Team Management",
+        "description": "Demonstrated leadership overseeing cross-functional teams and freelancers."
+    },
+    {
+        "skill": "Marketing & Sales",
+        "description": "Complementary skills from entrepreneurial ventures."
+    },
+    {
+        "skill": "Community Manager",
+        "description": "Managed communities for Gaita.com.br and Harley Davidson social network."
     }
 ]

@@ -1,0 +1,51 @@
+[
+    {
+        "category": "Android Development",
+        "skills": [
+            "Kotlin",
+            "Java",
+            "Android Jetpack",
+            "Compose",
+            "Coroutines",
+            "MVVM",
+            "Data Binding",
+            "Gradle",
+            "Unit Testing (JUnit, Mockk)",
+            "UI Testing (Espresso, Robolectric)",
+            "Firebase",
+            "Custom Views",
+            "Android NDK"
+        ]
+    },
+    {
+        "category": "Backend & Fullstack",
+        "skills": [
+            "Kotlin (Ktor, Spring)",
+            "Python",
+            "Javascript",
+            "Hibernate",
+            "GraphQL",
+            "Node.js",
+            "Meteor.JS",
+            "ActionScript"
+        ]
+    },
+    {
+        "category": "DevOps & Tools",
+        "skills": [
+            "CD/CI",
+            "Splunk",
+            "Git",
+            "Linux",
+            "AWS"
+        ]
+    },
+    {
+        "category": "AI & GenAI",
+        "skills": [
+            "GenAI",
+            "OpenAI API",
+            "Prompt Engineering"
+        ]
+    }
+]
