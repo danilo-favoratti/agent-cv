@@ -55,6 +55,53 @@ const AgentChat = () => {
         setInput("");
     };
 
+    const allSuggestions = [
+        "What are Danilo's core technical skills?",
+        "Tell me about his experience at Walmart.",
+        "Does he have experience with GenAI?",
+        "What awards has he won?",
+        "How did he improve video processing speed at Pactto?",
+        "What did he do at Sam's Club?",
+        "Tell me about his work with drones at Shield.ai.",
+        "What is his experience with Kotlin?",
+        "Has he worked with Jetpack Compose?",
+        "What side projects has he built?",
+        "Tell me about 'Aurora' and 'Cupidoodle'.",
+        "What are his soft skills?",
+        "What do his colleagues say about him?",
+        "Does he have leadership experience?",
+        "What is his educational background?",
+        "Has he given any public speeches?",
+        "What languages does he speak?",
+        "Tell me about his harmonica course.",
+        "What technologies does he use for Backend?",
+        "Does he know Python and FastAPI?",
+        "What is his experience with AWS?",
+        "How many years of experience does he have?",
+        "What is his approach to unit testing?",
+        "Has he worked with startups?",
+        "What did he build for Harley Davidson?",
+        "Tell me about his Anti-Corruption Award.",
+        "Does he have experience with WebSockets?",
+        "What is his 'Looking For' statement?",
+        "How does he handle cross-functional collaboration?",
+        "What are his personal values?"
+    ];
+
+    const [suggestions, setSuggestions] = useState([]);
+
+    useEffect(() => {
+        // Randomly select 5 unique suggestions on mount
+        const shuffled = [...allSuggestions].sort(() => 0.5 - Math.random());
+        setSuggestions(shuffled.slice(0, 5));
+    }, []);
+
+    const handleSuggestionClick = (suggestion) => {
+        if (status !== "connected") return;
+        setMessages((prev) => [...prev, { type: "user_query", content: suggestion }]);
+        ws.current.send(suggestion);
+    };
+
     const renderMessage = (msg, index) => {
         switch (msg.type) {
             case "user_query":
@@ -143,18 +190,31 @@ const AgentChat = () => {
 
     return (
         <div className="flex flex-col h-full bg-slate-900 border-l border-slate-800">
-            {/* Scrollable Chat Area */}
+            {/* Chat Messages */}
             <div
                 ref={scrollRef}
-                className="flex-1 overflow-y-auto p-4 space-y-2 custom-scrollbar"
+                className="flex-1 overflow-y-auto p-4 space-y-4 custom-scrollbar"
             >
-                {messages.length === 0 && (
-                    <div className="h-full flex flex-col items-center justify-center text-slate-600 space-y-4 opacity-50">
-                        <Cpu size={48} className="animate-pulse" />
-                        <p className="text-sm font-medium">System Ready. Awaiting Input.</p>
+                {messages.length === 0 ? (
+                    <div className="flex flex-col items-center justify-center h-full text-center space-y-6">
+                        <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50">
+                            <h3 className="text-slate-300 font-medium mb-4">Start a conversation</h3>
+                            <div className="flex flex-wrap justify-center gap-2">
+                                {suggestions.map((suggestion, idx) => (
+                                    <button
+                                        key={idx}
+                                        onClick={() => handleSuggestionClick(suggestion)}
+                                        className="bg-slate-700/50 hover:bg-blue-600/20 hover:text-blue-400 hover:border-blue-500/30 text-slate-400 text-sm py-2 px-4 rounded-full border border-slate-700 transition-all duration-200"
+                                    >
+                                        {suggestion}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
                     </div>
+                ) : (
+                    messages.map((msg, index) => renderMessage(msg, index))
                 )}
-                {messages.map((msg, idx) => renderMessage(msg, idx))}
             </div>
 
             {/* Input Area */}
