@@ -1,0 +1,22 @@
+[
+    {
+        "name": "E-commerce Platform",
+        "role": "Lead Backend Engineer",
+        "technologies": [
+            "Python",
+            "Django",
+            "PostgreSQL"
+        ],
+        "description": "Built a scalable e-commerce platform handling 10k concurrent users."
+    },
+    {
+        "name": "Real-time Chat App",
+        "role": "Full Stack Developer",
+        "technologies": [
+            "React",
+            "FastAPI",
+            "WebSockets"
+        ],
+        "description": "Developed a real-time chat application with agent integration."
+    }
+]

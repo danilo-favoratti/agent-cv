@@ -1,0 +1,12 @@
+[
+    {
+        "name": "TechCorp Inc.",
+        "industry": "Technology",
+        "duration": "2 years"
+    },
+    {
+        "name": "FinServe Ltd.",
+        "industry": "Finance",
+        "duration": "1.5 years"
+    }
+]

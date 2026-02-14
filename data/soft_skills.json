@@ -1,0 +1,14 @@
+[
+  {
+    "skill": "Communication",
+    "description": "Excellent at explaining complex technical concepts to non-technical stakeholders."
+  },
+  {
+    "skill": "Leadership",
+    "description": "Led a team of 5 developers to deliver a critical project ahead of schedule."
+  },
+  {
+    "skill": "Problem Solving",
+    "description": "Strong analytical skills, capable of debugging complex distributed systems."
+  }
+]
