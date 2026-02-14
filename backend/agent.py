@@ -74,15 +74,26 @@ Begin!
                 )
                 
                 response_text = completion.choices[0].message.content
+                
+                # Check for Final Answer
+                if "Final Answer:" in response_text:
+                    parts = response_text.split("Final Answer:")
+                    thought_part = parts[0].strip()
+                    final_answer = parts[1].strip()
+                    
+                    if thought_part:
+                        # Log thought without the final answer
+                        await self.logger.log(thought_part, type="thought")
+                    
+                    # We return the final answer. The main.py will log it as type="final_answer"
+                    return final_answer
+
+                # If no final answer, log the whole thought (which might include Action)
                 await self.logger.log(response_text, type="thought")
                 
                 # Append assistant thought to history
                 messages.append({"role": "assistant", "content": response_text})
-                
-                # Check for Final Answer
-                if "Final Answer:" in response_text:
-                    final_answer = response_text.split("Final Answer:")[-1].strip()
-                    return final_answer
+
 
                 # Check for Action
                 # Regex to handle potential newlines or spacing issues

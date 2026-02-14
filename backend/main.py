@@ -59,8 +59,6 @@ async def websocket_endpoint(websocket: WebSocket):
             # For simplicity, assume raw text is the query
             query = data
             
-            await logger.log(f"Received query: {query}", type="user_query")
-            
             # Run the agent
             try:
                 # We run this in a thread or just await if async supported

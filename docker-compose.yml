@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   backend:
-    build: 
+    build:
       context: ./backend
       dockerfile: Dockerfile
     ports:
@@ -10,13 +10,13 @@ services:
     volumes:
       - ./backend:/app
       - ./data:/data
-    environment:
-      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    env_file:
+      - .env
     networks:
       - agent-net
 
   frontend:
-    build: 
+    build:
       context: ./frontend
       dockerfile: Dockerfile
     ports:

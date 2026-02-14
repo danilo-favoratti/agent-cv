@@ -55,7 +55,7 @@ function App() {
       </div>
 
       {/* Agent Chat Sidebar - Right Panel */}
-      <div className="w-[400px] flex flex-col border-l border-slate-800 bg-slate-900/95 backdrop-blur shadow-2xl z-10">
+      <div className="w-[800px] flex flex-col border-l border-slate-800 bg-slate-900/95 backdrop-blur shadow-2xl z-10">
         <div className="p-4 border-b border-slate-800 flex items-center gap-3">
           <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
           <span className="font-semibold text-slate-200">Assistant Active</span>

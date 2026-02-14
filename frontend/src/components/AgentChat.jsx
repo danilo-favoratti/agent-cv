@@ -65,7 +65,8 @@ const AgentChat = () => {
                 );
 
             case "thought":
-            case "step_start":
+            case "step_start": {
+                const cleanContent = msg.content.replace(/^Thought:\s*/i, "");
                 return (
                     <div key={index} className="flex gap-3 mb-2 animate-in fade-in duration-300 group">
                         <div className="mt-1 text-slate-500 group-hover:text-blue-400 transition-colors">
@@ -73,10 +74,11 @@ const AgentChat = () => {
                         </div>
                         <div className="prose prose-invert prose-sm max-w-none text-slate-400 italic">
                             <span className="text-xs uppercase tracking-wider font-bold text-slate-600 mr-2">Thinking</span>
-                            {msg.content}
+                            {cleanContent}
                         </div>
                     </div>
                 );
+            }
 
             case "action_call":
                 return (
