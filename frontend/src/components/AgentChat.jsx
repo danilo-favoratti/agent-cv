@@ -189,7 +189,7 @@ const AgentChat = () => {
     };
 
     return (
-        <div className="flex flex-col h-full bg-slate-900 border-l border-slate-800">
+        <div className="flex flex-col h-full bg-transparent">
             {/* Chat Messages */}
             <div
                 ref={scrollRef}
