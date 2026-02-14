@@ -23,6 +23,7 @@ class ReActAgent:
         self.tools = {t.name: t for t in get_tools()}
         self.logger = logger
         self.max_steps = 15
+        self.chat_history = []
 
     def _get_system_prompt(self) -> str:
         tool_desc = "\n".join([f"{t.name}: {t.description}" for t in self.tools.values()])
@@ -65,10 +66,13 @@ Begin!
 
     async def run(self, query: str):
         prompt = self._get_system_prompt()
-        messages = [
-            {"role": "system", "content": prompt},
-            {"role": "user", "content": query}
-        ]
+        messages = [{"role": "system", "content": prompt}]
+        
+        # Add chat history
+        messages.extend(self.chat_history)
+        
+        # Add current user query
+        messages.append({"role": "user", "content": query})
         
         step = 0
         while step < self.max_steps:
@@ -100,6 +104,10 @@ Begin!
                     if thought_part:
                         # Log thought without the final answer
                         await self.logger.log(thought_part, type="thought")
+                    
+                    # Update Memory
+                    self.chat_history.append({"role": "user", "content": query})
+                    self.chat_history.append({"role": "assistant", "content": final_answer})
                     
                     # We return the final answer. The main.py will log it as type="final_answer"
                     return final_answer
