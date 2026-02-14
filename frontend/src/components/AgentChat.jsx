@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Send, Terminal, Cpu, Database, User, CheckCircle2, AlertCircle } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 const AgentChat = () => {
     const [messages, setMessages] = useState([]);
@@ -74,7 +76,9 @@ const AgentChat = () => {
                         </div>
                         <div className="prose prose-invert prose-sm max-w-none text-slate-400 italic">
                             <span className="text-xs uppercase tracking-wider font-bold text-slate-600 mr-2">Thinking</span>
-                            {cleanContent}
+                            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                                {cleanContent}
+                            </ReactMarkdown>
                         </div>
                     </div>
                 );
@@ -111,8 +115,10 @@ const AgentChat = () => {
                             <CheckCircle2 size={20} />
                         </div>
                         <div className="bg-slate-800/50 p-4 rounded-2xl rounded-tl-none border border-slate-700/50 shadow-xl backdrop-blur-sm">
-                            <div className="prose prose-invert prose-sm max-w-none text-slate-200">
-                                {msg.content}
+                            <div className="prose prose-invert prose-sm max-w-[700px] text-slate-200 leading-relaxed">
+                                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                                    {msg.content}
+                                </ReactMarkdown>
                             </div>
                         </div>
                     </div>

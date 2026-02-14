@@ -1,12 +1,50 @@
 [
     {
-        "name": "TechCorp Inc.",
-        "industry": "Technology",
-        "duration": "2 years"
+        "name": "Meta",
+        "industry": "Social Media / Technology",
+        "duration": "Aug 2025 - Present",
+        "role": "Full Stack Gen AI Developer"
     },
     {
-        "name": "FinServe Ltd.",
-        "industry": "Finance",
-        "duration": "1.5 years"
+        "name": "Pactto",
+        "industry": "Media Technology",
+        "duration": "Feb 2024 - Apr 2024, Nov 2024 - Mar 2025",
+        "role": "Senior Mobile / Fullstack Engineer"
+    },
+    {
+        "name": "Sam's Club / Walmart",
+        "industry": "Retail / E-commerce",
+        "duration": "Apr 2018 - Oct 2024",
+        "role": "Android Senior Developer"
+    },
+    {
+        "name": "Shield AI",
+        "industry": "Defense / AI",
+        "duration": "May 2023 - Oct 2023",
+        "role": "Android Senior Developer"
+    },
+    {
+        "name": "ArcTouch",
+        "industry": "Software Agency",
+        "duration": "Dec 2016 - Oct 2022",
+        "role": "Android Senior Developer"
+    },
+    {
+        "name": "Tecsinapse",
+        "industry": "Technology",
+        "duration": "Jan 2015 - Nov 2016",
+        "role": "Android Tech Lead"
+    },
+    {
+        "name": "Yotta Apps",
+        "industry": "Software House",
+        "duration": "Sep 2010 - Dec 2014",
+        "role": "Co-Founder and Android Tech Lead"
+    },
+    {
+        "name": "Siemens / SSI",
+        "industry": "Technology / Electronics",
+        "duration": "Jul 2000 - Apr 2003",
+        "role": "Java Developer"
     }
 ]

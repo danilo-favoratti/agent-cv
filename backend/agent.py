@@ -66,7 +66,7 @@ Begin!
                 completion = await loop.run_in_executor(
                     None, 
                     lambda: self.client.chat.completions.create(
-                        model="gpt-4",
+                        model="gpt-4o-mini",
                         messages=messages,
                         stop=["Observation:"],
                         temperature=0

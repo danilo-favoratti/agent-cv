@@ -1,14 +1,30 @@
 [
-  {
-    "skill": "Communication",
-    "description": "Excellent at explaining complex technical concepts to non-technical stakeholders."
-  },
-  {
-    "skill": "Leadership",
-    "description": "Led a team of 5 developers to deliver a critical project ahead of schedule."
-  },
-  {
-    "skill": "Problem Solving",
-    "description": "Strong analytical skills, capable of debugging complex distributed systems."
-  }
+    {
+        "skill": "Leadership & Mentoring",
+        "description": "Experienced in leading mobile teams and mentoring engineers on modern development patterns and GenAI best practices."
+    },
+    {
+        "skill": "Cross-functional Collaboration",
+        "description": "Proven track record of driving collaboration between technical, design, and product teams to deliver high-quality features."
+    },
+    {
+        "skill": "Entrepreneurial Mindset",
+        "description": "Strong sense of ownership and initiative, demonstrated by co-founding companies and launching multiple successful own projects."
+    },
+    {
+        "skill": "High Performance & Efficiency",
+        "description": "Focused on optimizing processes and architectures to achieve significant gains in speed and system reliability."
+    },
+    {
+        "skill": "Problem Solving",
+        "description": "Analytical approach to complex technical challenges, capable of architecting innovative solutions for next-gen products."
+    },
+    {
+        "skill": "Timeliness & Reliability",
+        "description": "Consistently ensures project delivery on schedule while maintaining high standards of code quality and security."
+    },
+    {
+        "skill": "Adaptability",
+        "description": "Quickly masters new technologies and domains, as seen in the transition from mobile development to GenAI and drone navigation."
+    }
 ]

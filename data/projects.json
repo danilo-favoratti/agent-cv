@@ -1,22 +1,91 @@
 [
     {
-        "name": "E-commerce Platform",
-        "role": "Lead Backend Engineer",
+        "name": "Pactto AI Video Pipeline",
+        "role": "Senior Mobile / Fullstack Engineer",
         "technologies": [
-            "Python",
-            "Django",
-            "PostgreSQL"
+            "Kotlin",
+            "Spring",
+            "Hibernate",
+            "Ktor",
+            "WebSocket",
+            "Microservices",
+            "GenAI",
+            "Video Processing"
         ],
-        "description": "Built a scalable e-commerce platform handling 10k concurrent users."
+        "description": "Architected and delivered an AI-powered video upload pipeline, achieving a 455% increase in processing speed. Led backend API development and real-time WebSocket communication features."
     },
     {
-        "name": "Real-time Chat App",
-        "role": "Full Stack Developer",
+        "name": "Shield AI Drone Navigation",
+        "role": "Android Senior Developer",
         "technologies": [
-            "React",
-            "FastAPI",
-            "WebSockets"
+            "Android",
+            "Google Maps API",
+            "Drone Navigation",
+            "AI Integration",
+            "Unit Testing",
+            "Framework Development"
         ],
-        "description": "Developed a real-time chat application with agent integration."
+        "description": "Developed a comprehensive framework for generating navigation routes for AI-controlled drones using Google Maps API. Achieved 80% unit testing coverage."
+    },
+    {
+        "name": "Walmart / Sam's Club Integration",
+        "role": "Android Senior Developer",
+        "technologies": [
+            "Android",
+            "Kotlin",
+            "React Native",
+            "Unit Testing",
+            "UI Testing",
+            "Integration"
+        ],
+        "description": "Contributed to the Walmart and Sam's Club shopping apps, focusing on platform integration, performance optimization, and cross-functional features."
+    },
+    {
+        "name": "Cupidoodle Digital Storybooks",
+        "role": "Full Stack Developer (Own Project)",
+        "technologies": [
+            "Python",
+            "Javascript",
+            "OpenAI",
+            "GPT 4.1",
+            "GPT-Image-1"
+        ],
+        "description": "Digital Storybooks Creation with AI Assistance, integrating advanced GPT and image generation models."
+    },
+    {
+        "name": "Qual Canal",
+        "role": "Full Stack Developer (Side Project)",
+        "technologies": [
+            "Python",
+            "OpenAI",
+            "GPT 4o",
+            "Serper API",
+            "Javascript",
+            "CronTab"
+        ],
+        "description": "Search/Scraping platform to find where soccer games are being streamed, utilizing GPT-4o for accurate results."
+    },
+    {
+        "name": "Aurora RPG Engine",
+        "role": "Full Stack Developer (Side Project)",
+        "technologies": [
+            "Python",
+            "Multi Agents",
+            "OpenAI",
+            "GPT-Image-1",
+            "Javascript"
+        ],
+        "description": "RPG Game created on the fly with image consistency using a multi-agent system."
+    },
+    {
+        "name": "Timeless Knowledge YouTube",
+        "role": "GenAI Content Creator",
+        "technologies": [
+            "AI Audio Generation",
+            "OpenAI TTS",
+            "ElevenLabs",
+            "Deepgram"
+        ],
+        "description": "YouTube channel transforming classic literature into audiobooks using state-of-the-art AI audio generation."
     }
 ]
