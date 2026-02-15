@@ -12,7 +12,8 @@ const AgentChat = () => {
 
     useEffect(() => {
         // Connect to WebSocket
-        const wsUrl = import.meta.env.VITE_API_URL || 'ws://localhost:3031/ws';
+        const host = window.location.hostname;
+        const wsUrl = import.meta.env.VITE_API_URL || `ws://${host}:3031/ws`;
         ws.current = new WebSocket(wsUrl);
 
         ws.current.onopen = () => {
