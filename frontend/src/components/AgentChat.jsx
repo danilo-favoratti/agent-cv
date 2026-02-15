@@ -14,7 +14,13 @@ const AgentChat = () => {
         // Connect to WebSocket
         const host = window.location.hostname;
         const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-        const wsUrl = import.meta.env.VITE_API_URL || `${protocol}//${host}:3031/ws`;
+
+        // Use port 3031 for local development/IPs, but skip it for the production domain
+        // (cv.favoratti.com) because WSS usually goes through a proxy on the standard port.
+        const isLocal = host === 'localhost' || host === '127.0.0.1' || host.match(/^\d+\.\d+\.\d+\.\d+$/);
+        const wsPort = isLocal ? ':3031' : '';
+
+        const wsUrl = import.meta.env.VITE_API_URL || `${protocol}//${host}${wsPort}/ws`;
         ws.current = new WebSocket(wsUrl);
 
         ws.current.onopen = () => {
