@@ -7,6 +7,16 @@
         "github": "https://github.com/danilo-favoratti",
         "linkedin": "https://linkedin.com/in/danilofavoratti",
         "location": "San Diego, CA",
-        "summary": "+15 years creating Android apps from scratch and also working on big teams. Extensive experience building products from the ground up—taking ideas from zero to MVP and scaling MVPs to full production."
+        "summary": "+15 years creating Android apps from scratch and also working on big teams. Extensive experience building products from the ground up—taking ideas from zero to MVP and scaling MVPs to full production.",
+        "languages": [
+            {
+                "name": "English",
+                "level": "Fluent"
+            },
+            {
+                "name": "Portuguese",
+                "level": "Native"
+            }
+        ]
     }
 ]

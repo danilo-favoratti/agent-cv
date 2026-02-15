@@ -47,5 +47,76 @@
             "OpenAI API",
             "Prompt Engineering"
         ]
+    },
+    {
+        "category": "Python Development",
+        "skills": [
+            "FastAPI",
+            "Uvicorn",
+            "Websockets",
+            "OpenAI API",
+            "Websocket"
+        ]
+    },
+    {
+        "category": "Java Development",
+        "skills": [
+            "Java",
+            "Spring",
+            "Hibernate",
+            "GraphQL"
+        ]
+    },
+    {
+        "category": "Javascript Development",
+        "skills": [
+            "Javascript",
+            "Node.js",
+            "Meteor.JS",
+            "ActionScript"
+        ]
+    },
+    {
+        "category": "Mobile Development",
+        "skills": [
+            "Android",
+            "Kotlin",
+            "Java",
+            "Android Jetpack",
+            "Compose",
+            "Coroutines",
+            "MVVM",
+            "Data Binding",
+            "Gradle",
+            "Unit Testing (JUnit, Mockk)",
+            "UI Testing (Espresso, Robolectric)",
+            "Firebase",
+            "Custom Views",
+            "Android NDK"
+        ]
+    },
+    {
+        "category": "ActionScript Development",
+        "skills": [
+            "ActionScript",
+            "Flash",
+            "Flex"
+        ]
+    },
+    {
+        "category": "HTML/CSS",
+        "skills": [
+            "HTML",
+            "CSS",
+            "Bootstrap",
+            "Tailwind CSS"
+        ]
+    },
+    {
+        "category": "Testing",
+        "skills": [
+            "Unit Testing (JUnit, Mockk)",
+            "UI Testing (Espresso, Robolectric)"
+        ]
     }
 ]
