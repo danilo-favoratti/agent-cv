@@ -25,6 +25,22 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
+        border: "hsl(var(--border))",
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        github: {
+          darker: "#0d1117",
+          dark: "#161b22",
+          surface: "#21262d",
+          border: "#30363d",
+          text: "#c9d1d9",
+          muted: "#7d8590",
+          blue: "#58a6ff",
+          orange: "#ffb380",
+          green: "#39d353",
+        }
       },
       borderRadius: {
         lg: "var(--radius)",

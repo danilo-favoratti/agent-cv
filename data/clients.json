@@ -1,5 +1,12 @@
 [
     {
+        "name": "Meta",
+        "role": "GenAI Full Stack Engineer",
+        "location": "U.S. (Remote)",
+        "duration": "2025 - Present",
+        "description": "Building next-generation AI features across the Meta ecosystem using state-of-the-art Generative AI models and full-stack technologies."
+    },
+    {
         "name": "Pactto",
         "role": "Senior Mobile / Fullstack Engineer",
         "location": "U.S.",
@@ -54,5 +61,40 @@
         "location": "Brazil",
         "duration": "2010-2014",
         "description": "Used Android NDK for remote interviewing. Engineered offline-ready student-teacher app. Created Analytics Tool. Led 4 freelancers."
+    },
+    {
+        "name": "NC4U",
+        "role": "Senior Java Developer / TI leader and Java EE architect",
+        "location": "Brazil",
+        "duration": "2008-2010",
+        "description": "TI leader and Java EE architect. Works with a narrowcasting system with more than one thousand of machines across Brazil."
+    },
+    {
+        "name": "XPHouse",
+        "role": "Senior Java Developer",
+        "location": "Brazil",
+        "duration": "2007-2008",
+        "description": "Java EE software development and architecture."
+    },
+    {
+        "name": "DBK Consulting",
+        "role": "Java Developer",
+        "location": "Brazil",
+        "duration": "2006-2007",
+        "description": "System analyst and internal product coordinator."
+    },
+    {
+        "name": "Ultracon",
+        "role": "Java Developer",
+        "location": "Brazil",
+        "duration": "2003-2005",
+        "description": "Java developer focused on enterprise solutions."
+    },
+    {
+        "name": "SSI Consulting",
+        "role": "Junior Java Developer",
+        "location": "Brazil",
+        "duration": "2000-2003",
+        "description": "Junior developer starting career in Java development."
     }
 ]

@@ -115,7 +115,7 @@ const AgentChat = () => {
             case "user_query":
                 return (
                     <div key={index} className="flex justify-end mb-4 animate-in fade-in slide-in-from-bottom-2 duration-300">
-                        <div className="bg-blue-600 text-white p-3 rounded-2xl rounded-tr-none max-w-[85%] shadow-lg">
+                        <div className="bg-github-orange text-github-darker p-3 rounded-2xl rounded-tr-none max-w-[85%] shadow-lg font-medium">
                             <p className="text-sm">{msg.content}</p>
                         </div>
                     </div>
@@ -126,11 +126,11 @@ const AgentChat = () => {
                 const cleanContent = msg.content.replace(/^Thought:\s*/i, "");
                 return (
                     <div key={index} className="flex gap-3 mb-2 animate-in fade-in duration-300 group">
-                        <div className="mt-1 text-slate-500 group-hover:text-blue-400 transition-colors">
+                        <div className="mt-1 text-github-muted group-hover:text-github-orange transition-colors">
                             <Cpu size={16} />
                         </div>
-                        <div className="prose prose-invert prose-sm max-w-none text-slate-400 italic">
-                            <span className="text-xs uppercase tracking-wider font-bold text-slate-600 mr-2">Thinking</span>
+                        <div className="prose prose-invert prose-sm max-w-none text-github-muted italic">
+                            <span className="text-xs uppercase tracking-wider font-bold text-github-muted/80 mr-2">Thinking</span>
                             <ReactMarkdown remarkPlugins={[remarkGfm]}>
                                 {cleanContent}
                             </ReactMarkdown>
@@ -141,11 +141,11 @@ const AgentChat = () => {
 
             case "action_call":
                 return (
-                    <div key={index} className="flex gap-3 mb-2 pl-4 border-l-2 border-yellow-500/30 animate-in fade-in duration-300">
-                        <div className="mt-1 text-yellow-500">
+                    <div key={index} className="flex gap-3 mb-2 pl-4 border-l-2 border-github-orange/30 animate-in fade-in duration-300">
+                        <div className="mt-1 text-github-orange">
                             <Terminal size={16} />
                         </div>
-                        <div className="font-mono text-xs text-yellow-500/90 break-all">
+                        <div className="font-mono text-xs text-github-orange/90 break-all">
                             {msg.content}
                         </div>
                     </div>
@@ -153,11 +153,11 @@ const AgentChat = () => {
 
             case "observation":
                 return (
-                    <div key={index} className="flex gap-3 mb-4 pl-4 border-l-2 border-green-500/30 animate-in fade-in duration-300">
-                        <div className="mt-1 text-green-500">
+                    <div key={index} className="flex gap-3 mb-4 pl-4 border-l-2 border-github-green/30 animate-in fade-in duration-300">
+                        <div className="mt-1 text-github-green">
                             <Database size={16} />
                         </div>
-                        <div className="font-mono text-xs text-slate-500 break-words max-h-32 overflow-y-auto custom-scrollbar">
+                        <div className="font-mono text-xs text-github-muted break-words max-h-32 overflow-y-auto custom-scrollbar">
                             {msg.content}
                         </div>
                     </div>
@@ -187,24 +187,24 @@ const AgentChat = () => {
                         <div className="flex-1 space-y-4">
                             {/* Rich UI Component */}
                             {uiData && uiData.type === 'list' && (
-                                <div className="bg-slate-800/30 p-4 rounded-2xl border border-slate-700/50 backdrop-blur-sm">
-                                    <h3 className="text-sm font-bold text-slate-300 mb-3 uppercase tracking-wider flex items-center gap-2">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+                                <div className="bg-github-surface/30 p-4 rounded-2xl border border-github-border/50 backdrop-blur-sm">
+                                    <h3 className="text-sm font-bold text-github-muted mb-3 uppercase tracking-wider flex items-center gap-2">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-github-orange"></div>
                                         {uiData.title}
                                     </h3>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                                         {uiData.items.map((item, i) => (
-                                            <div key={i} className="bg-slate-900/80 p-3 rounded-xl border border-slate-700 hover:border-blue-500/30 hover:bg-slate-800 transition-all group">
+                                            <div key={i} className="bg-github-dark/80 p-3 rounded-xl border border-github-border hover:border-github-orange/30 hover:bg-github-surface/50 transition-all group">
                                                 <div className="flex items-start justify-between mb-1">
-                                                    <h4 className="font-semibold text-slate-200 text-sm">{item.title}</h4>
+                                                    <h4 className="font-semibold text-github-text text-sm">{item.title}</h4>
                                                     {item.icon && <span className="text-lg opacity-80 group-hover:scale-110 transition-transform">{item.icon}</span>}
                                                 </div>
-                                                {item.role && <p className="text-xs text-blue-400 mb-1">{item.role}</p>}
-                                                {item.description && <p className="text-xs text-slate-400 mb-2 line-clamp-3">{item.description}</p>}
+                                                {item.role && <p className="text-xs text-github-orange mb-1">{item.role}</p>}
+                                                {item.description && <p className="text-xs text-github-muted mb-2 line-clamp-3">{item.description}</p>}
                                                 {item.tags && (
                                                     <div className="flex flex-wrap gap-1.5">
                                                         {item.tags.map((tag, t) => (
-                                                            <span key={t} className="text-[10px] bg-slate-800 text-slate-400 px-1.5 py-0.5 rounded border border-slate-700">
+                                                            <span key={t} className="text-[10px] bg-github-surface text-github-muted px-1.5 py-0.5 rounded border border-github-border">
                                                                 {tag}
                                                             </span>
                                                         ))}
@@ -218,8 +218,8 @@ const AgentChat = () => {
 
                             {/* Standard Text Content */}
                             {textContent && (
-                                <div className="bg-slate-800/50 p-4 rounded-2xl rounded-tl-none border border-slate-700/50 shadow-xl backdrop-blur-sm">
-                                    <div className="prose prose-invert prose-sm max-w-[700px] text-slate-200 leading-relaxed">
+                                <div className="bg-github-surface/50 p-4 rounded-2xl rounded-tl-none border border-github-border/50 shadow-xl backdrop-blur-sm">
+                                    <div className="prose prose-invert prose-sm max-w-[700px] text-github-text leading-relaxed">
                                         <ReactMarkdown remarkPlugins={[remarkGfm]}>
                                             {textContent}
                                         </ReactMarkdown>
@@ -233,7 +233,7 @@ const AgentChat = () => {
 
             case "error":
                 return (
-                    <div key={index} className="flex gap-3 mb-4 text-red-400 bg-red-950/20 p-3 rounded-lg border border-red-900/50">
+                    <div key={index} className="flex gap-3 mb-4 text-[#f85149] bg-[#f85149]/10 p-3 rounded-lg border border-[#f85149]/30">
                         <AlertCircle size={16} />
                         <p className="text-xs">{msg.content}</p>
                     </div>
@@ -241,7 +241,7 @@ const AgentChat = () => {
 
             default:
                 return (
-                    <div key={index} className="text-xs text-slate-600 mb-1 font-mono">
+                    <div key={index} className="text-xs text-github-muted mb-1 font-mono">
                         [{msg.type}] {msg.content}
                     </div>
                 );
@@ -257,14 +257,16 @@ const AgentChat = () => {
             >
                 {messages.length === 0 ? (
                     <div className="flex flex-col items-center justify-center h-full text-center space-y-6">
-                        <div className="bg-slate-800/50 p-6 rounded-2xl border border-slate-700/50">
-                            <h3 className="text-slate-300 font-medium mb-4">Start a conversation</h3>
-                            <div className="flex flex-wrap justify-center gap-2">
+                        <div className="bg-github-surface/30 p-8 rounded-3xl border border-github-orange/20 shadow-[0_0_30px_-5px_rgba(255,140,66,0.05)] backdrop-blur-sm">
+                            <h3 className="text-github-text font-bold mb-6 text-xl tracking-tight">
+                                How can I help you discover <span className="text-github-orange">Danilo's</span> career?
+                            </h3>
+                            <div className="flex flex-wrap justify-center gap-3">
                                 {suggestions.map((suggestion, idx) => (
                                     <button
                                         key={idx}
                                         onClick={() => handleSuggestionClick(suggestion)}
-                                        className="bg-slate-700/50 hover:bg-blue-600/20 hover:text-blue-400 hover:border-blue-500/30 text-slate-400 text-sm py-2 px-4 rounded-full border border-slate-700 transition-all duration-200"
+                                        className="bg-github-dark/40 hover:bg-github-orange/20 hover:text-github-orange hover:border-github-orange/50 text-github-text/80 text-sm py-2.5 px-5 rounded-xl border border-github-orange/20 transition-all duration-300 hover:shadow-[0_0_15px_-3px_rgba(255,140,66,0.3)] hover:-translate-y-0.5"
                                     >
                                         {suggestion}
                                     </button>
@@ -278,7 +280,7 @@ const AgentChat = () => {
             </div>
 
             {/* Input Area */}
-            <div className="p-4 border-t border-slate-800 bg-slate-950/50 backdrop-blur-md">
+            <div className="p-4 border-t border-github-border bg-github-darker/50 backdrop-blur-md">
                 <form onSubmit={sendMessage} className="relative">
                     <input
                         type="text"
@@ -286,21 +288,21 @@ const AgentChat = () => {
                         onChange={(e) => setInput(e.target.value)}
                         placeholder={status === "connected" ? "Ask about my experience..." : "Connecting..."}
                         disabled={status !== "connected"}
-                        className="w-full bg-slate-900 border border-slate-700 rounded-xl py-3 pl-4 pr-12 text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-inner"
+                        className="w-full bg-github-dark border border-github-border rounded-xl py-3 pl-4 pr-12 text-sm text-github-text placeholder:text-github-muted focus:outline-none focus:ring-2 focus:ring-github-orange/50 focus:border-github-orange/50 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-inner"
                     />
                     <button
                         type="submit"
                         disabled={!input.trim() || status !== "connected"}
-                        className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 text-slate-400 hover:text-blue-500 hover:bg-blue-500/10 rounded-lg transition-colors disabled:opacity-30"
+                        className="absolute right-1.5 top-1/2 -translate-y-1/2 p-2 bg-[#ffb380] text-[#0d1117] hover:bg-[#ffcca1] rounded-xl transition-all duration-300 disabled:opacity-40 shadow-lg shadow-orange-500/20 hover:scale-105 active:scale-95"
                     >
-                        <Send size={18} />
+                        <Send size={18} strokeWidth={2.5} />
                     </button>
                 </form>
                 <div className="mt-2 flex justify-between items-center px-1">
-                    <span className="text-[10px] uppercase font-bold tracking-widest text-slate-600">
-                        Agent Status: <span className={status === "connected" ? "text-green-500" : "text-red-500"}>{status}</span>
+                    <span className="text-[10px] uppercase font-bold tracking-widest text-github-muted">
+                        Agent Status: <span className={status === "connected" ? "text-github-green" : "text-github-orange"}>{status}</span>
                     </span>
-                    <span className="text-[10px] text-slate-700 font-mono">v1.0.0</span>
+                    <span className="text-[10px] text-github-muted font-mono">v1.0.0</span>
                 </div>
             </div>
         </div>

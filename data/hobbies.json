@@ -14,5 +14,21 @@
     {
         "name": "Tech Experimentation",
         "description": "Loves building side projects to explore new technologies, from 'Tic Tac Toe' with sockets in 1998 to modern GenAI applications."
+    },
+    {
+        "name": "Cavaquinho",
+        "description": "Loves playing cavaquinho and samba music."
+    },
+    {
+        "name": "Acoustic Guitar",
+        "description": "Loves playing acoustic guitar and rock music."
+    },
+    {
+        "name": "Volleyball",
+        "description": "Loves playing volleyball and beach volleyball. Has been captain of its high school team."
+    },
+    {
+        "name": "Crochet",
+        "description": "Loves crocheting and making amigurumis."
     }
 ]

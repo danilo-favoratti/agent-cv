@@ -2,121 +2,94 @@
     {
         "category": "Android Development",
         "skills": [
+            "Android Studio",
             "Kotlin",
             "Java",
-            "Android Jetpack",
-            "Compose",
+            "Gradle",
+            "SQLite",
+            "Android NDK",
+            "Fragments",
+            "Volley",
+            "Camera API",
+            "Sockets",
+            "Jetpack Compose",
             "Coroutines",
             "MVVM",
-            "Data Binding",
-            "Gradle",
-            "Unit Testing (JUnit, Mockk)",
-            "UI Testing (Espresso, Robolectric)",
-            "Firebase",
-            "Custom Views",
-            "Android NDK"
+            "Unit & UI Testing"
         ]
     },
     {
-        "category": "Backend & Fullstack",
+        "category": "Java EE & Backend",
         "skills": [
-            "Kotlin (Ktor, Spring)",
-            "Python",
-            "Javascript",
+            "IntelliJ IDEA",
+            "Java EE Architecture",
+            "Maven",
             "Hibernate",
-            "GraphQL",
-            "Node.js",
-            "Meteor.JS",
-            "ActionScript"
-        ]
-    },
-    {
-        "category": "DevOps & Tools",
-        "skills": [
-            "CD/CI",
-            "Splunk",
-            "Git",
-            "Linux",
-            "AWS"
+            "Spring / Spring Boot",
+            "JSF",
+            "Jboss/Wildfly",
+            "Tomcat",
+            "Ktor",
+            "Microservices"
         ]
     },
     {
         "category": "AI & GenAI",
         "skills": [
-            "GenAI",
-            "OpenAI API",
-            "Prompt Engineering"
+            "Generative AI",
+            "OpenAI API (GPT-4o)",
+            "Prompt Engineering",
+            "Multi-Agent Systems",
+            "LLM Integration",
+            "Python (FastAPI)"
         ]
     },
     {
-        "category": "Python Development",
+        "category": "Javascript & Frontend",
         "skills": [
-            "FastAPI",
-            "Uvicorn",
-            "Websockets",
-            "OpenAI API",
-            "Websocket"
-        ]
-    },
-    {
-        "category": "Java Development",
-        "skills": [
-            "Java",
-            "Spring",
-            "Hibernate",
-            "GraphQL"
-        ]
-    },
-    {
-        "category": "Javascript Development",
-        "skills": [
-            "Javascript",
+            "WebStorm",
+            "Meteor.js",
             "Node.js",
-            "Meteor.JS",
-            "ActionScript"
+            "jQuery",
+            "Framework 7",
+            "React",
+            "Tailwind CSS",
+            "HTML5 / CSS3"
         ]
     },
     {
-        "category": "Mobile Development",
+        "category": "Databases",
         "skills": [
-            "Android",
-            "Kotlin",
-            "Java",
-            "Android Jetpack",
-            "Compose",
-            "Coroutines",
-            "MVVM",
-            "Data Binding",
-            "Gradle",
-            "Unit Testing (JUnit, Mockk)",
-            "UI Testing (Espresso, Robolectric)",
-            "Firebase",
-            "Custom Views",
-            "Android NDK"
+            "PostgreSQL",
+            "MongoDB",
+            "Oracle",
+            "SQL Server",
+            "MySQL",
+            "Redis"
         ]
     },
     {
-        "category": "ActionScript Development",
+        "category": "Operating Systems",
         "skills": [
-            "ActionScript",
-            "Flash",
-            "Flex"
+            "Linux (Ubuntu)",
+            "OS X",
+            "Windows",
+            "Android"
         ]
     },
     {
-        "category": "HTML/CSS",
+        "category": "Tools & Methodologies",
         "skills": [
-            "HTML",
-            "CSS",
-            "Bootstrap",
-            "Tailwind CSS"
-        ]
-    },
-    {
-        "category": "Testing",
-        "skills": [
-            "Unit Testing (JUnit, Mockk)",
-            "UI Testing (Espresso, Robolectric)"
+            "Git / GitHub",
+            "SVN",
+            "Genymotion",
+            "Scrum / Kanban",
+            "RESTful APIs",
+            "JSON / XML",
+            "Splunk",
+            "PHP",
+            "Unity3D",
+            "AWS"
         ]
     }
 ]
